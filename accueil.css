@@ -1,0 +1,101 @@
+*,::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    position:relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(img/a.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+    text-align: right;
+    list-style-type: none;
+}
+
+nav .logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+ul li{
+    position: relative;
+    margin-right: 10 px;
+    bottom:  20px;
+}
+
+ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #ffff;
+    font-size: 20px;
+    padding: 5px;
+}
+
+ul li a::after{
+    content: '';
+    background: #050505aa;
+    position: absolute;
+    bottom:0 ;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transform: translate(-20%, -5px);
+    translate: o.3s;
+}
+
+ul li a:hover::after{
+    width: 38%;  
+}
+
+.site-container{
+    position: absolute;
+    bottom: 10%;
+    color: antiquewhite;
+}
+
+.site-container h1{
+    font-size: 120px;
+    line-height: 12opx;
+    margin-left: -10px;
+    color:transparent;
+    -webkit-text-stroke: 1px #ffff;
+    background: url(img/c.jpg) ;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: animate 20s linear 2s infinite alternate;
+}
+@keyframes animate {
+  100%{
+      background-position: -500px 0;
+  }   
+}
+keyf
+
+.site-container h3{
+    position: relative;
+    bottom: 35px;
+    font-size: 40px;
+    font-weight: 500;
+}
